@@ -22,7 +22,7 @@ public class lotteryService implements lotteryRepository {
     public String getLotteryInfo() {
         ArrayList<Document> resultList= new ArrayList<Document>();
         MongoDb dbMongo=new MongoDb();
-        MongoCollection<Document> collection=dbMongo.getMongoDatabase().getCollection("Match");
+        MongoCollection<Document> collection=dbMongo.getMongoDatabase().getCollection("Lottery");
 
         FindIterable<Document> result =collection.find();
 

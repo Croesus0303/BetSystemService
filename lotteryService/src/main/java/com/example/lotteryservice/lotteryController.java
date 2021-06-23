@@ -13,8 +13,8 @@ public class lotteryController {
 
     @GetMapping(value = "/getLotteryInfos")
     public String getLotteryInfo(){
-        return "Test";
-        //return service.getLotteryInfo().toString();
+        //return "Test";
+        return service.getLotteryInfo().toString();
     }
 
 

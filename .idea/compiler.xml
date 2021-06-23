@@ -6,16 +6,26 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="BetSystemService" />
-        <module name="MatchInformationService" />
+        <module name="lotteryService" />
+        <module name="MatchInfoService" />
         <module name="UserService" />
+        <module name="BetSystemService" />
+        <module name="matchBetService" />
+        <module name="MatchInformationService" />
+        <module name="playSlotService" />
+        <module name="playRouletteService" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="MatchInfoService" options="-parameters" />
       <module name="MatchInformationService" options="-parameters" />
       <module name="UserService" options="-parameters" />
+      <module name="lotteryService" options="-parameters" />
+      <module name="matchBetService" options="-parameters" />
+      <module name="playRouletteService" options="-parameters" />
+      <module name="playSlotService" options="-parameters" />
     </option>
   </component>
 </project>

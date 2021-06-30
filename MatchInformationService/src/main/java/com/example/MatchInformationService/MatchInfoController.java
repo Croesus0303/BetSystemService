@@ -1,13 +1,12 @@
 package com.example.MatchInformationService;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Map;
 
 @RestController
-public class MatchInfoController {
+public class MatchInfoController implements MatchInfoRepository {
 
     MatchInfoService service= new MatchInfoService();
 
@@ -15,6 +14,17 @@ public class MatchInfoController {
     public String getMatchInfos(){
 
         return service.getMatchInfos().toString();
+    }
+
+    @PostMapping (value="/createCoupon")
+    public String createCoupon(@RequestBody createCouponRequest CreateCouponRequest) {
+
+        return service.createCoupon(CreateCouponRequest);
+    }
+
+    @GetMapping (value = "/checkCoupon")
+    public String checkCoupon(@RequestBody Map<String,Object> json) {
+        return service.checkCoupon(json);
     }
 
 

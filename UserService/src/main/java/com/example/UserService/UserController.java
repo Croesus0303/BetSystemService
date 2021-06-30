@@ -3,10 +3,11 @@ package com.example.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-@RestController
-public class UserController {
+import java.util.Map;
 
-    UserRepository userRepository;
+@RestController
+public class UserController implements UserRepository {
+
     UserService userService = new UserService();
 
 
@@ -15,10 +16,14 @@ public class UserController {
         userService.createUser(userName,password);
     }
 
-    @GetMapping(value = "/abc")
-    public String deneme(){
+    @PostMapping(value = "/loadMoney")
+    public String loadMoney(@RequestBody Map<String,Object> json) {
+        return userService.loadMoney(json);
+    }
 
-        return "abc";
+    @PostMapping(value = "/gameTransaction")
+    public String gameTransaction(@RequestBody Map<String,Object> json) {
+            return userService.gameTransaction(json);
     }
 
 

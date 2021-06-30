@@ -5,7 +5,7 @@ import com.mongodb.MongoClientURI;
 import com.mongodb.client.MongoDatabase;
 
 public class MongoDb {
-    final String url="mongodb://bugra:bugra123123@betsystemmatch-shard-00-00.otwt9.mongodb.net:27017,betsystemmatch-shard-00-01.otwt9.mongodb.net:27017,betsystemmatch-shard-00-02.otwt9.mongodb.net:27017/BetSystemMatch?ssl=true&replicaSet=atlas-aot3n4-shard-0&authSource=admin&retryWrites=true&w=majority" ;
+    final String url="mongodb://bugra:bugra123123@betsystem-shard-00-00.36jvp.mongodb.net:27017,betsystem-shard-00-01.36jvp.mongodb.net:27017,betsystem-shard-00-02.36jvp.mongodb.net:27017/BetSystem?ssl=true&replicaSet=atlas-9104ya-shard-0&authSource=admin&retryWrites=true&w=majority" ;
 
     private MongoClientURI connectionString;
 

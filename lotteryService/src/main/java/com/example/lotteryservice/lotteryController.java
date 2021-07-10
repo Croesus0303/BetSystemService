@@ -11,12 +11,19 @@ public class lotteryController {
 
     lotteryService service= new lotteryService();
 
-    @GetMapping(value = "/getLotteryInfos")
+    @GetMapping(value = "/getLotteryInfo")
     public String getLotteryInfo(){
         //return "Test";
-        return service.getLotteryInfo().toString();
+        return service.getLotteryInfo();
     }
-
+    @PostMapping(value = "/playLottery")
+    public String playLottery(@RequestParam String userName){
+        return service.playLottery(userName).toString();
+    }
+    @GetMapping(value = "/checkLottery")
+    public String checkLotterty(@RequestParam String userName){
+        return service.checkLottery(userName);
+    }
 
 }
 

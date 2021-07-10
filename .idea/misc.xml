@@ -10,7 +10,6 @@
         <option value="$PROJECT_DIR$/UserService/pom.xml" />
         <option value="$PROJECT_DIR$/playRouletteService/pom.xml" />
         <option value="$PROJECT_DIR$/lotteryService/pom.xml" />
-        <option value="$PROJECT_DIR$/betMatchService/pom.xml" />
         <option value="$PROJECT_DIR$/playSlotService/pom.xml" />
       </list>
     </option>

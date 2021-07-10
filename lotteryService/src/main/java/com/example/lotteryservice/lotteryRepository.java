@@ -10,5 +10,7 @@ import java.util.ArrayList;
 public interface lotteryRepository {
 
     String getLotteryInfo ();
+    String checkLottery(String userName);
+    String playLottery(String userName);
 
 }

@@ -10,12 +10,14 @@
         <module name="MatchInfoService" />
         <module name="UserService" />
         <module name="BetSystemService" />
-        <module name="matchBetService" />
         <module name="MatchInformationService" />
         <module name="playSlotService" />
         <module name="playRouletteService" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="matchBetService" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
